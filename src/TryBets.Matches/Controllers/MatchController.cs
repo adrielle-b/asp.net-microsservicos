@@ -16,7 +16,7 @@ public class MatchController : Controller
     [HttpGet("{MatchFinished}")]
     public IActionResult Get(bool MatchFinished)
     {
-        throw new NotImplementedException();
+        var matches = _repository.Get(MatchFinished);
+        return Ok(matches);
     }
 }
-// iniciando pr
